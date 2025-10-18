@@ -1,0 +1,15 @@
+<%@ page language="java" %>
+<%
+    // Déclarer un compteur
+    Integer count = (Integer) application.getAttribute("count");
+    if (count == null) {
+        count = 1;
+    } else {
+        count++;
+    }
+    application.setAttribute("count", count);
+%>
+
+<h2>=== HEADER ===</h2>
+<p>Compteur de visites : <strong><%= count %></strong></p>
+<hr>
